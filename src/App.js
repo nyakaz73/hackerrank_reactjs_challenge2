@@ -65,13 +65,14 @@ class App extends Component {
   sortDescendingAge = () => {
     console.log('Sorting Date');
     const sortedAge = this.state.people.sort((a, b) => a.date - b.date);
+
     console.log('Before sorted');
     console.log(sortedAge);
     console.log('after sorted');
 
-    /*this.setState({
-      people: sortedAge
-    });*/
+    this.setState({
+      people: sortedAge.reverse()
+    });
   }
 
   render() {
