@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {PropTypes} from 'prop-types';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -39,7 +39,10 @@ class RecordTable extends Component {
         ];
     }
 
+
+
     render() {
+        console.log(this.props.sortedItems);
         return (
             <Paper className="width">
                 <Table>
@@ -50,10 +53,13 @@ class RecordTable extends Component {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                                <TableRow>
-                                    <TableCell>Insert Name</TableCell>
-                                    <TableCell>Insert DOB</TableCell>
-                                </TableRow>
+                        {this.props.sortedItems.map((userData, index) => (
+                            <TableRow key={index}>
+                                <TableCell>{userData.name}</TableCell>
+                                <TableCell>{userData.dob}</TableCell>
+                            </TableRow>
+                        ))}
+
                     </TableBody>
                 </Table>
             </Paper>
