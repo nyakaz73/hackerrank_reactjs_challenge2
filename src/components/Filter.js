@@ -17,4 +17,9 @@ class Filter extends Component {
     }
 }
 
+//PropTypes
+Filter.propTypes = {
+    sortAscendingName: PropTypes.func.isRequired,
+    sortDescendingAge: PropTypes.func.isRequired
+}
 export default Filter;

@@ -67,4 +67,9 @@ class RecordTable extends Component {
     }
 }
 
+//PropTypes
+RecordTable.propTypes = {
+    sortedItems: PropTypes.array.isRequired
+}
+
 export default RecordTable;
